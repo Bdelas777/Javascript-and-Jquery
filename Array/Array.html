@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Usando Arrays</title>
+    <link rel="stylesheet" href="css/micss.css">
+    <script>
+      //Declaracion de array
+      var articulos=["zapatillas","camiseta","pantalon","calcetines"];
+      //var articulos= new Array("zapatillas","camiseta","pantalon","calcetines");
+      //Array Vacio
+      //var articulos=[]  
+    </script>
+  </head>
+
+  <body>
+    <div class="contenedor">
+      <div class="header">
+        <p class="logo">JavaScript Arrays <i class="mm">Bernardo de la S</p>
+      </div>
+    <div class="contenido">
+      <div class="principal">
+        <h1>Manejando Arrays</h1>
+        <script>
+          document.write("<p> El primer articulo es <strong> ");
+          document.write(articulos[0] + "</strong></p>")
+          //alert(articulos.length);
+          document.write("<p> El último articulo es <strong> ");
+          document.write(articulos[articulos.length-1] + "</strong></p>");
+          //agrega un array al principio es unshift
+          articulos.unshift("Balon");
+          document.write("<p> Agregamos este nuevo elemento al inicio: <strong> ");
+          document.write(articulos[0] + "</strong></p>");
+          document.write("<p> Agregamos este nuevo elemento al final: <strong> ");
+          //Agrega un metodo al final es push
+          //articulos.push("raqueta");
+          articulos.push(prompt("Intoduce el articulo"));
+          document.write(articulos[articulos.length-1] + "</strong></p>");
+          document.write("<p>"+articulos[0]+"<br/>");
+          document.write("<p>"+articulos[1]+"<br/>");
+          document.write("<p>"+articulos[2]+"<br/>");
+          document.write("<p>"+articulos[3]+"<br/>");
+          document.write("<p>"+articulos[4]+"<br/>");
+          document.write("<p>"+articulos[5]+"<br/></p>");
+          //Eliminacion de primer elmento con shift
+          alert("Se ha eliminado el primer elemento");
+          articulos.shift();
+          document.write("<p>"+articulos[0]+"<br/>");
+          document.write("<p>"+articulos[1]+"<br/>");
+          document.write("<p>"+articulos[2]+"<br/>");
+          document.write("<p>"+articulos[3]+"<br/>");
+          document.write("<p>"+articulos[4]+"<br/></p>");
+          alert("Se ha eliminado el ultimo elemento");
+          //eliminado del ultimo elemento con pop 
+          articulos.pop();
+          document.write("<p>"+articulos[0]+"<br/>");
+          document.write("<p>"+articulos[1]+"<br/>");
+          document.write("<p>"+articulos[2]+"<br/>");
+          document.write("<p>"+articulos[3]+"<br/></p>");
+
+        </script>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
